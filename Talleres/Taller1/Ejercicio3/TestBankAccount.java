@@ -1,6 +1,6 @@
 public class TestBankAccount {
     public static void main(String[] args) {
-        BankAccount account1 = new BankAccount(12345, "John Doe", 1000.0);
+        BankAccount account1 = new BankAccount(12345, "Carlos", 1000.0);
         System.out.println("Account Number: " + account1.getAccountNumber());
         System.out.println("Account Holder: " + account1.getAccountHolder());
         System.out.println("Balance: " + account1.getBalance() + "$");
