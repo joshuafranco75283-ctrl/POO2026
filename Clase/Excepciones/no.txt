@@ -1,0 +1,4 @@
+no poner todeo el codigo dentro del try y catch para manejar la excepcion debido a que el codigo sera muy 
+lento, solo poner las excepciones en concreto,
+no dejar catch vacio siempre que haga algo,
+Agregar mensajes significativos 
