@@ -1,15 +1,15 @@
 package domain;
 public class Ellipse extends Shape {
-    private double semiMajorAxis;
-    private double semiMinorAxis;
+    private float semiMajorAxis;
+    private float semiMinorAxis;
 
-    public Ellipse(Double x, Double y, Integer id,  double semiMajorAxis, double semiMinorAxis) {
+    public Ellipse(float x, float y, Integer id,  float semiMajorAxis, float semiMinorAxis) {
         super(x, y, id);
         setSemiMajorAxis(semiMajorAxis);
         setSemiMinorAxis(semiMinorAxis);
     }
 
-    public void setSemiMajorAxis(double semiMajorAxis) {
+    public void setSemiMajorAxis(float semiMajorAxis) {
         if (semiMajorAxis <= 0) {
             throw new IllegalArgumentException("Major axis must be positive.");
         }
@@ -19,33 +19,33 @@ public class Ellipse extends Shape {
         this.semiMajorAxis = semiMajorAxis;
     }
     
-    public void setSemiMinorAxis(double semiMinorAxis) {
+    public void setSemiMinorAxis(float semiMinorAxis) {
         if (semiMinorAxis <= 0) {
             throw new IllegalArgumentException("Minor axis must be positive.");
         }
-        if (semiMinorAxis > semiMajorAxis) {
+        if (semiMinorAxis > this.semiMajorAxis) {
             throw new IllegalArgumentException("Minor axis must be less than or equal to major axis.");
         }
         this.semiMinorAxis = semiMinorAxis;
     }
 
-    public double getSemiMajorAxis() {
+    public float getSemiMajorAxis() {
         return semiMajorAxis;
     }
 
-    public double getSemiMinorAxis() {
+    public float getSemiMinorAxis() {
         return semiMinorAxis;
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * (semiMajorAxis) * (semiMinorAxis);
+    public float getArea() {
+        return (float)(Math.PI * (semiMajorAxis) * (semiMinorAxis));
     }
 
     @Override
-    public double getPerimeter() {
+    public float getPerimeter() {
         // Approximation of the perimeter of an ellipse
-        return (Math.PI) * (3 * (semiMajorAxis + semiMinorAxis) - Math.sqrt((3 * semiMajorAxis + semiMinorAxis) * (semiMajorAxis + 3 * semiMinorAxis)));
+        return (float)((Math.PI) * (3 * (semiMajorAxis + semiMinorAxis) - Math.sqrt((3 * semiMajorAxis + semiMinorAxis) * (semiMajorAxis + 3 * semiMinorAxis))));
     }
     
 }

@@ -1,28 +1,29 @@
 package domain;
 
 public class Circle extends Shape {
-    private double radius;
+    private float radius;
 
-    public void setRadius(double radius) {
+    public void setRadius(float radius) {
         if (radius <= 0) {
             throw new IllegalArgumentException("Radius must be positive.");
         }
         this.radius = radius;
     }
-    public Circle(double x, double y, int id, double radius){
+    public Circle(float x, float y, int id, float radius){
         super(x, y, id);
         setRadius(radius);
     }
-    public double getRadius() {
+    public float getRadius() {
         return radius;
     }
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public float getArea() {
+        return (float)( Math.PI * radius * radius);
     }
 
-    @Override public double getPerimeter() {
-        return 2 * Math.PI * radius;
+    @Override 
+    public float getPerimeter() {
+        return (float) (2.0f * Math.PI * radius);
     }
 }
 

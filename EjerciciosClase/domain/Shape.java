@@ -2,10 +2,10 @@ package domain;
 
 public abstract class Shape {
     private int id;
-    private double x;
-    private double y;
+    private float  x;
+    private float  y;
 
-    public Shape(double x, double y, int id) {
+    public Shape(float x, float y, int id) {
         
         this.x = x;
         this.y = y;
@@ -23,22 +23,22 @@ public abstract class Shape {
         this.id = id;
     }
 
-    public double getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public double getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(float y) {
         this.y = y;
     }
 
-    public abstract double getArea();
-    public abstract double getPerimeter();
+    public abstract float getArea();
+    public abstract float getPerimeter();
 }
