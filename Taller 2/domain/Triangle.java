@@ -29,7 +29,7 @@ public class Triangle extends Rectangle {
     }
     @Override 
     public float getArea(){
-        float s = (getSide1() + getSide2() + getSide3()) / 2;
+        float s = (getSide1() + getSide2() + getSide3()) / 2.0f;
         return (float)(Math.sqrt(s * (s - getSide1()) * (s - getSide2()) * (s - getSide3())));
     }
     @Override 
