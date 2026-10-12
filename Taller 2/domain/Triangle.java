@@ -1,7 +1,7 @@
 package domain;
 public class Triangle extends Rectangle {
     protected float side3;
-    private float side4;
+    
     
 
     public Triangle(float x, float y, Integer id, float side1, float side2, float side3) {

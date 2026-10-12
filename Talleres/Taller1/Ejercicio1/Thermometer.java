@@ -14,7 +14,7 @@ public class Thermometer{
 
     public boolean setTemperature(double newTemperature){
         if(isValidTemperature(newTemperature)){
-            this.temperature = newTemperature;
+            temperature = newTemperature;
             return true;
         }
         return false;
