@@ -11,11 +11,16 @@ public class Main {
         new Train(505, 10000.0f, 45.0f, 350.0f)
         };    
 
+        try {
+            new Taxi(202,-4.0f,2.0f,3.0f);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Taxi couldn't be created "+ e.getMessage());
+        }
 
         for(int i = 0; i < transports.length; i++){
             String transportMethod = transports[i].getClass().getSimpleName();
             System.out.println(transportMethod +" With ID " + transports[i].getId());
-            System.out.println(transports[i].getPrice());
+            System.out.println(transports[i].getPrice() + " dollars");
         }
         
 
