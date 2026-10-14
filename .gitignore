@@ -1,0 +1,31 @@
+ # Bloquear archivos ejecutables y binarios pesados
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.out
+
+# Bloquear carpetas de compilacion automaticas
+bin/
+obj/
+out/
+build/
+target/
+
+# Archivos grandes que suelen colarse por error (Videos, instaladores)
+*.zip
+*.rar
+*.tar.gz
+*.mp4
+*.mkv
+*.iso
+
+# Configuraciones locales de editores de código
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
